@@ -11,6 +11,24 @@ const app = express();
 // Middleware para parsear cuerpos en formato JSON
 app.use(express.json());
 
+// Endpoint básico para verificar que la API responde en el navegador/ZAP
+app.get('/', (req, res) => {
+  res.status(200).json({
+    name: 'Reservas API',
+    status: 'ok',
+    endpoints: {
+      health: 'GET /health',
+      register: 'POST /api/auth/register',
+      login: 'POST /api/auth/login',
+      crearReserva: 'POST /api/reservas (Authorization: Bearer <token>)'
+    }
+  });
+});
+
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
 // Conexión a la base de datos MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Conectado a MongoDB'))
