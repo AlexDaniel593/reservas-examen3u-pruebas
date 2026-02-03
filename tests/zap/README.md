@@ -16,12 +16,12 @@
 3. En la pestaña `Exclude from Context` (opcional):
    - Añadir regex: `http://localhost:3000/(favicon\.ico|static|assets)/.*`
 
-### 3. Configurar Autenticación Manual (Form-based)
+### 3. Configurar Autenticación
 
 Si prefieres autenticación manual sin scripts:
 
 1. En el contexto → pestaña `Authentication`
-2. Seleccionar `Manual Authentication`
+2. Seleccionar `Form-based`
 3. Login URL: `http://localhost:3000/api/auth/login`
 4. Logged In Indicator (regex): `\Q{"token"\E`
 5. Logged Out Indicator (regex): `\Q"error"\E`
@@ -30,15 +30,7 @@ Si prefieres autenticación manual sin scripts:
 - Email: `test@example.com`
 - Password: `password123`
 
-### 4. Configurar Usuario
-
-1. En el contexto → pestaña `Users`
-2. Click `Add` para añadir usuario
-3. Nombre: `testuser`
-4. Click en el usuario → `Set Credentials`
-5. Añadir las credenciales de prueba
-
-### 5. Habilitar Session Management para JWT
+### 4. Habilitar Session Management para JWT
 
 1. En el contexto → pestaña `Session Management`
 2. Seleccionar `HTTP Authentication Session Management`
