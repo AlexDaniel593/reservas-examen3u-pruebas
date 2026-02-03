@@ -1,0 +1,6 @@
+projectKey=reservas
+serverUrl=http://localhost:9000
+serverVersion=25.10.0.114319
+dashboardUrl=http://localhost:9000/dashboard?id=reservas
+ceTaskId=507a23fe-24b7-40dd-91d4-2550653bbeab
+ceTaskUrl=http://localhost:9000/api/ce/task?id=507a23fe-24b7-40dd-91d4-2550653bbeab
